@@ -83,7 +83,7 @@ public class ElasticsearchHttpClient
         // {"k" : "v2"}\n
         // '
         try {
-            String path = String.format("/%s/%s/_bulk", task.getIndex(), task.getType());
+            String path = String.format("/%s/_bulk", task.getIndex());
             int recordSize = records.size();
             String idColumn = task.getId().orElse(null);
             if (recordSize > 0) {
